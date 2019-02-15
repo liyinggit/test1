@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import NameForm from "./component/reactexcesice/NameForm";
+import Calculator from "./component/reactexcesice/temperature/Calculator";
 
 /*function Root(){
     return(
@@ -12,7 +12,7 @@ import NameForm from "./component/reactexcesice/NameForm";
 
 
 ReactDOM.render(
-    <NameForm/>,
+    <Calculator/>,
     document.getElementById('root')
 );
 
