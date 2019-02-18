@@ -1,18 +1,29 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import {BrowserRouter, Route ,Switch} from 'react-router-dom';
+import {Provider} from 'mobx-react';
 import App from "../App";
+import store from "../store";
+import Login from "../component/login";
+import NoMatch from "../component/404";
+
+class Rootnavigation extends React.Component{
+
+    render(){
+        return(
+            <Provider {...store}>
+                <BrowserRouter basename='/'>
+                    <Switch>
+                        <Route exact path='/' component={App}/>
+                        <Route path='/login' component={Login}/>
+                        <Route component={NoMatch}/>
+                    </Switch>
+
+                </BrowserRouter>
+
+            </Provider>
+        );
+    }
+}
 
 
-const Container = (props) => {
-    return (
-        <div>{props.children}</div>
-    );
-};
-
-const routes = (
-    <Route path="/" component={Container} >
-        <Route path="/app" component={App} />
-    </Route>
-);
-
-export default routes;
+export default Rootnavigation;

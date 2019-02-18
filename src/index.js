@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Calculator from "./component/reactexcesice/temperature/Calculator";
+import Rootnavigation from "../src/navigation/rootnavigation";
 
-/*function Root(){
+function Root(){
     return(
         <Rootnavigation/>
     )
-}*/
+}
 
 
 ReactDOM.render(
-    <Calculator/>,
+    Root(),
     document.getElementById('root')
 );
 
