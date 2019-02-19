@@ -13,14 +13,14 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import {styles} from '../style/styles';
-import {inject, observer} from "mobx-react";
-import {observable, action} from 'mobx';
+import { observer} from "mobx-react";
+import {observable} from 'mobx';
 
 
-// @observer
+@observer
 class Login extends React.Component {
 
-    // @observable
+    @observable
     user = null;
 
     constructor(props) {
