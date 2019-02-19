@@ -13,8 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import {styles} from '../style/styles';
-/*import {inject, observer} from "mobx-react";
-import {observable, action} from 'mobx';*/
+import {inject, observer} from "mobx-react";
+import {observable, action} from 'mobx';
 
 
 // @observer
@@ -82,6 +82,10 @@ class Login extends React.Component {
     }
 }
 
+/**
+ * 类型检查
+ * @type {{classes: (*|Validator<NonNullable<T>>)}}
+ */
 Login.propTypes = {
     classes: PropTypes.object.isRequired,
 };
