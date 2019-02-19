@@ -17,9 +17,10 @@ import {styles} from '../style/styles';
 import {observable, action} from 'mobx';*/
 
 
+// @observer
 class Login extends React.Component {
 
-
+    // @observable
     user = null;
 
     constructor(props) {
